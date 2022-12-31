@@ -24,7 +24,7 @@ The project was modeled after modern social networks. The user is provided to:
 
 - If the user has an account, he needs to enter his email and password, the data is checked against the data from the database, whether the parameters are the same. If they are the same, the application takes them to another page.
 
-- The user is provided with the publication of comments and sub-comments.
+- With the publication of comments and sub-comments.
 
 - Only comments entered by the user can be deleted.
 
