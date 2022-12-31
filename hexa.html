@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Hexa</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="inner-container left-side">
+            <img src="img/profile.jpg" class="profile" />
+
+            <p><strong id="username"></strong></p>
+            <p><strong id="email"></strong></p>
+            <button id="editAccount">Izmeni nalog</button>
+            <button id="logout">Odjavi se</button>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="inner-container right-side">
+            <form id="postForm">
+              <textarea
+                id="postContent"
+                placeholder="Napisi nesto i objavi..."
+              ></textarea>
+              <button>Objavi</button>
+            </form>
+            <div id="allPostsWrappear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-modal">
+      <button id="closeModal">X</button>
+      <form id="editForm">
+        <h2>Izmeni svoj profil</h2>
+        <div>
+          <label for="korisnicko_ime">Korisnicko ime:</label>
+          <input
+            id="korisnicko_ime"
+            type="text"
+            name="korisnicko_ime"
+            placeholder="niko.nikolic1"
+          />
+        </div>
+        <div>
+          <label for="edit_email">Email adresa: </label>
+          <input
+            id="edit_email"
+            type="text"
+            name="register_email"
+            placeholder="niko.nikolic@mail.com"
+          />
+        </div>
+        <div>
+          <button>Izmeni</button>
+        </div>
+      </form>
+      <hr />
+      <button id="deleteProfile">OBRISI PROFIL</button>
+    </div>
+
+    <script src="js/Session.js"></script>
+    <script src="js/User.js"></script>
+    <script src="js/Comments.js"></script>
+    <script src="js/Post.js"></script>
+    <script src="js/hexa.js"></script>
+  </body>
+</html>
+
+<!-- KOD LOGOVANJA PRVO SE PROVERAVAJU COOKII DA LI IH IMA, AKO IH NEMA, BICE INDEX STR, AKO IMA BICE HEXA.NA OSNOVO COOKIA ZNAMO KOJI SE USER ULOGOVAO I TIME BARATAMO SA PROFILNOM...JER TAMO PISE ID -->
